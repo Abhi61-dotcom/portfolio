@@ -1,0 +1,112 @@
+/* ---- RESET ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---- ROOT CONTAINER ---- */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+/* ---- CARD SECTION ---- */
+.card {
+  padding: 2em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* ---- TEXT SECTION ---- */
+.read-the-docs {
+  color: #888;
+}
+
+/* ---- HEADER ---- */
+header {
+  width: 100%;
+  background-color: #4d7b56;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-container h1 {
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.cart-icon {
+  cursor: pointer;
+  position: relative;
+  font-size: 35px;
+}
+
+.cart-icon sup {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/* ---- PRODUCT GRID ---- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* ---- RESPONSIVE DESIGN ---- */
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px !important;
+  }
+
+  .header-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .cart-icon {
+    font-size: 28px;
+  }
+
+  .cart-icon sup {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+}

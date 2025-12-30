@@ -1,0 +1,376 @@
+.container-1 {
+  width: 100%;
+  height: 100vh;
+}
+
+/* ---------------- Firstview ---------------- */
+.Firstview {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* CODERS COFFIE */
+.coderscoffie {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  right: 80px;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Blvck Tumbler */
+.blavktumbler {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  font-size: 36px;
+  color: #F1DABF;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left square box */
+.firstlefttextbox {
+  position: absolute;
+  top: 550px;
+  left: 100px;
+  width: 280px;
+  height: 177px;
+  background: #212730;
+}
+
+.leftboxtext {
+  position: absolute;
+  top: 566px;
+  left: 160px;
+  width: 490px;
+  color: white;
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+.firstrighttextbox {
+  position: absolute;
+  right: 70px;
+  top: 560px;
+  width: 280px;
+  height: 168px;
+  background-color: #20262D;
+}
+
+.rightboxtext {
+  position: absolute;
+  right: 50px;
+  top: 560px;
+  color: white;
+  width: 600px;
+  font-size: 19px;
+  line-height: 2;
+}
+
+.rightboxtext h2 {
+  color: #F1DABF;
+  font-size: 35px;
+}
+
+.leftboxtext h3 {
+  color: #F1DABF;
+  letter-spacing: 1px;
+}
+
+.leftboxtext p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Coffee cup image in middle */
+.coffiecup {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 280px;
+  height: 65vh;
+  transform: translateX(-50%);
+  background: url("./assets/big coffie cup.png") no-repeat center/contain;
+  z-index: 2;
+  filter: drop-shadow(40px 20px 20px rgba(0, 0, 0, 0.8));
+}
+
+.largetext {
+  font-size: 110px;
+  position: absolute;
+  left: 49%;
+  color: #21262F;
+}
+
+.orangecircle {
+  position: absolute;
+  top: 110px;
+  left: 720px;
+  width: 210px;
+  height: 300px;
+  background: url("./assets/orange circle.png") no-repeat center/contain;
+  z-index: 1;
+}
+
+/* ---------------- Heading Section ---------------- */
+.heading1 {
+  text-align: center;
+  padding: 60px 20px 15px;
+}
+
+.heading1 h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.heading1 p {
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+/* ---------------- Coffee Cards ---------------- */
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.card {
+  text-align: center;
+  max-width: 350px;
+  height: 520px;
+  /* background-color: #F19509; */
+
+}
+
+.card img {
+    margin-top: 45px;
+  max-width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card h2 {
+  color: #EA910A;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+/* ---------------- Form + Map ---------------- */
+.formmap {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 60vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.form {
+  flex: 1;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 12px;
+  overflow-y: hidden;
+}
+
+.form h1 {
+  font-weight: 700;
+  font-family: serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form input {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  height: 55px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form button {
+  background-color: #EA910A;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #9d5c07;
+}
+
+.map {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map img {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ---------------- Keyboard Section ---------------- */
+.keyboard {
+  margin: 65px 6%;
+  width: 88%;
+  height: 360px;
+  border-radius: 15px;
+  background: url('./assets/keyboard.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.keyboard h1 {
+  position: absolute;
+  right: 170px;
+  top: 70px;
+  color: #0a0a0a;
+}
+
+.keyboard p {
+  position: absolute;
+  right: 100px;
+  top: 120px;
+  color: #0a0a0a;
+  font-size: 20px;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 100px;
+  bottom: 60px;
+}
+
+.appstore img{
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.playstore img {
+  width: 200px;
+  height: 67px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.appstore img:hover,
+.playstore img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+  background: linear-gradient(to right, #F19509, #E86F00);
+  padding: 50px 40px 20px;
+  color: white;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.info h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.info p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.info h4 {
+  margin: 8px 0;
+  font-weight: normal;
+}
+
+.leftf,
+.middlef,
+.rightf {
+  flex: 1;
+  min-width: 250px;
+}
+
+.middlef ul {
+  list-style: none;
+  padding: 0;
+}
+
+.middlef li {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.middlef li:hover {
+  color: #1c12e3;
+  font-weight: 600;
+}
+
+.rightf img {
+  width: 250px;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 20px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 16px;
+}
