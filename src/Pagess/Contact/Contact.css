@@ -1,0 +1,22 @@
+.contact-page {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
+  text-align: center;
+}
+
+.contract h1,
+.myinfo h2,
+.myinfo h3 {
+  margin: 10px 0;
+}
+.contract h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+}.contract h1 {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  color: transparent;
+}
