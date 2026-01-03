@@ -3,8 +3,8 @@ import Weather from "../../assets/Weather.png";
 import recipe from "../../assets/Recipefinder.png";
 import mystore from "../../assets/My Store.png";
 import coffee from "../../assets/Coders Coffee.png";
-import organic from "../../assets/Bootstrapproject.png"
-import sales from "../../assets/salesorder.png"
+import organic from "../../assets/Bootstrapproject.png";
+import sales from "../../assets/salesorder.png";
 import "./project.css";
 
 export const Projects = () => {
@@ -17,6 +17,12 @@ export const Projects = () => {
         </div>
         <div className="weatherinfo">
           <div>
+            <div className="main" >
+             <div>
+              <strong style={{fontSize:"40px" }}>Modern Weather</strong>
+             </div>
+             <div><strong style={{fontSize:"40px"}}>Application</strong></div>
+            </div>
             <h1>
               A modern weather app that gives you real-time temperature,
               conditions, and city-wise climate updates. Just enter your city
@@ -24,7 +30,17 @@ export const Projects = () => {
             </h1>
           </div>
           <div>
-            <h2>Link</h2>
+            <button
+              onClick={() => window.open("https://weather-findder.vercel.app/")}
+            >
+              Visit Project --&gt;
+            </button>
+          </div>
+          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <div className="technology">
+            <h4>HTML</h4>
+            <h4>CSS</h4>
+            <h4>JavaScript</h4>
           </div>
         </div>
       </div>
@@ -36,6 +52,10 @@ export const Projects = () => {
         </div>
         <div className="recipeinfo">
           <div>
+            <div>
+              <div><strong style={{fontSize:"40px"}}>Food Recipe Finder </strong></div>
+              <div><strong style={{fontSize:"40px"}}>Website</strong></div>
+            </div>
             <h2>
               This app instantly finds recipes for any food you search. Just
               enter the dish name and get the full recipe with ingredients and
@@ -45,7 +65,18 @@ export const Projects = () => {
             </h2>
           </div>
           <div>
-            <h3>link</h3>
+            <button
+              onClick={() => window.open("https://recipe-findder.vercel.app/")}
+            >
+              Visit Project --&gt;
+            </button>
+          </div>
+          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <div className="technology">
+            <h4>HTML</h4>
+            <h4>CSS</h4>
+            <h4>JavaScript</h4>
+            <h4>Api</h4>
           </div>
         </div>
       </div>
@@ -57,6 +88,10 @@ export const Projects = () => {
         </div>
         <div className="mystoreinfo">
           <div>
+            <div>
+              <div><strong style={{fontSize:"40px"}}>E-commerce </strong></div>
+              <div><strong style={{fontSize:"40px"}}>Website</strong></div>
+            </div>
             <h2>
               My Store — A fully functional e-commerce project built using API
               integration. This project is a demo online shopping system where
@@ -65,7 +100,19 @@ export const Projects = () => {
             </h2>
           </div>
           <div>
-            <h3>LINK</h3>
+            <button
+              onClick={() => window.open("https://my-storre.vercel.app/")}
+            >
+              Visit Project --&gt;
+            </button>
+          </div>
+          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <div className="technology">
+            <h4>HTML</h4>
+            <h4>CSS</h4>
+            <h4>JavaScript</h4>
+            <h4>React</h4>
+            <h4>Api</h4>
           </div>
         </div>
       </div>
@@ -77,6 +124,10 @@ export const Projects = () => {
         </div>
         <div className="coffeeinfo">
           <div>
+            <div>
+              <div><strong style={{fontSize:"40px"}}>Coders Coffee</strong></div>
+              <div><strong style={{fontSize:"40px"}}>Clone</strong></div>
+            </div>
             <h2>
               Coders Coffee — A React-based animated clone website. This is a
               front-end clone of the Coders Coffee website, recreated purely
@@ -85,41 +136,85 @@ export const Projects = () => {
             </h2>
           </div>
           <div>
-            <h3>link</h3>
+            <button
+              onClick={() => window.open("https://annimated-coffee.vercel.app/")}
+            >
+              Visit Project --&gt;
+            </button>
+          </div>
+          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <div className="technology">
+            <h4>HTML</h4>
+            <h4>CSS</h4>
+            <h4>Bootstrap</h4>
           </div>
         </div>
       </div>
 
-       {/* ----------------------------BOOTSTRAP ------------------------------- */}
-       <div className="organic">
+      {/* ----------------------------BOOTSTRAP ------------------------------- */}
+      <div className="organic">
         <div>
           <img src={organic} alt="" />
         </div>
         <div className="organicinfo">
           <div>
-            <h2>A responsive website built using Bootstrap, featuring a clean layout, structured sections, and mobile-friendly design. The project highlights my skills in using Bootstrap’s grid system, components, and utilities to create a simple, modern, and functional UI.</h2>
+            <div>
+              <div><strong style={{fontSize:"40px"}}>Basic Sample</strong></div>
+              <div><strong style={{fontSize:"40px"}}>Website</strong></div>
+            </div>
+            <h2>
+              A responsive website built using Bootstrap, featuring a clean
+              layout, structured sections, and mobile-friendly design. The
+              project highlights my skills in using Bootstrap’s grid system,
+              components, and utilities to create a simple, modern, and
+              functional UI.
+            </h2>
           </div>
           <div>
-            <h3>LINK</h3>
+            <button
+              onClick={() => window.open("https://bootstrap-web-drab.vercel.app/")}
+            >
+              Visit Project --&gt;
+            </button>
+          </div>
+          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <div className="technology">
+            <h4>HTML</h4>
+            <h4>CSS</h4>
+            <h4>Bootstrap</h4>
           </div>
         </div>
-       </div>
+      </div>
 
-       {/* ----------------------------SALES ORDER ------------------------------- */}
-       <div className="salesorder">
+      {/* ----------------------------SALES ORDER ------------------------------- */}
+      <div className="salesorder">
         <div>
           <img src={sales} alt="" />
         </div>
         <div className="salesorderinfo">
           <div>
-            <h2>A fast and dynamic Sales Order entry tool built with React. It allows quick customer input, multi-item management, auto-calculations for amount, discount, and taxes, and provides a clean real-time summary for error-free order creation.</h2>
+            <h2>
+              A fast and dynamic Sales Order entry tool built with React. It
+              allows quick customer input, multi-item management,
+              auto-calculations for amount, discount, and taxes, and provides a
+              clean real-time summary for error-free order creation.
+            </h2>
           </div>
           <div>
-            <h3>Link</h3>
+            <button
+              onClick={() => window.open("https://annimated-coffee.vercel.app/")}
+            >
+              Visit Project --&gt;
+            </button>
+          </div>
+          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <div className="technology">
+            <h4>HTML</h4>
+            <h4>CSS</h4>
+            <h4>Bootstrap</h4>
           </div>
         </div>
-       </div>
-
+      </div>
     </div>
   );
 };
