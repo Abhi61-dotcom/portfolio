@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { RouteProvide } from './My store/RouteProvide'
+import { RouteProvide } from './Mystore/RouteProvide'
 
 function App() {
   const [count, setCount] = useState(0)
