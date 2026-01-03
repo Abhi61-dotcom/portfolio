@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Api.css";
+import "./APi.css";
 import ProductPage from "./ProductPage";
 import { Header } from "./Header"; // add this line
 
