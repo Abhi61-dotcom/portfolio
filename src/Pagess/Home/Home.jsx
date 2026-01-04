@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profile from "../../assets/profile.png";
+import profile from "../../assets/profile.jpg";
 import "./Home.css";
 
 export const Home = () => {
@@ -75,15 +75,10 @@ export const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            I’m a computer Science graduate with strong skills in
-            <span class="text-blue-400 font-semibold"> HTML</span>,{" "}
-            <span class="text-blue-400 font-semibold"> CSS</span>,{" "}
-            <span class="text-blue-400 font-semibold"> JavaScript</span>, and{" "}
-            <span class="text-blue-400 font-semibold"> React.js. </span>.
-            Passionate about building responsive, user-friendly web interfaces
-            and eager to enhance expertise in modern front-end development.
-            Motivated to contribute creativity and technical knowledge to
-            real-world projects.
+            {/* I’m a computer Science graduate with strong skills in
+            <span class="text-blue-400 font-semibold"> Frontend </span>, and{" "}
+            <span class="text-blue-400 font-semibold"> BAckend </span>. */}
+            Computer Science graduate with a strong foundation in React and MERN stack development, including hands-on experience in building responsive, user-friendly web applications. Skilled in frontend and backend technologies, with a passion for modern web development and clean UI design. Motivated fresher seeking an internship or entry-level developer role to apply technical skills, enhance practical experience, and contribute effectively to real-world projects.
           </motion.p>
 
           {/* Animated Button */}
