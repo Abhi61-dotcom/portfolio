@@ -423,3 +423,113 @@ button:hover {
     color: #000;
     transform: translateY(-3px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+/* -------- Tablet View -------- */
+@media (max-width: 992px) {
+
+  .weather,
+  .recipe,
+  .mystore,
+  .coffee,
+  .organic,
+  .salesorder {
+    flex-direction: column;
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .weather > div,
+  .recipe > div,
+  .mystore > div,
+  .coffee > div,
+  .organic > div,
+  .salesorder > div {
+    width: 100%;
+    flex: unset;
+  }
+
+  .weather img,
+  .recipe img,
+  .mystore img,
+  .coffee img,
+  .organic img,
+  .salesorder img {
+    width: 100%;
+    height: auto;
+  }
+
+  .technology {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* -------- Mobile View -------- */
+@media (max-width: 600px) {
+
+  .weather,
+  .recipe,
+  .mystore,
+  .coffee,
+  .organic,
+  .salesorder {
+    margin-top: 75px;
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  strong {
+    font-size: 28px !important;
+    text-align: center;
+  }
+
+  .weatherinfo h1,
+  .recipeinfo h2,
+  .mystoreinfo h2,
+  .coffeeinfo h2,
+  .organicinfo h2,
+  .salesorderinfo h2 {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .technology {
+    justify-content: center;
+  }
+
+  .technology h4 {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+}
+
+/* -------- Extra Small Devices -------- */
+@media (max-width: 400px) {
+
+  strong {
+    font-size: 24px !important;
+  }
+
+  .technology h4 {
+    font-size: 8px;
+    padding: 5px 8px;
+  }
+}
