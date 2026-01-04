@@ -202,7 +202,7 @@ export const Projects = () => {
           </div>
           <div>
             <button
-              onClick={() => window.open("https://annimated-coffee.vercel.app/")}
+              onClick={() => window.open("https://salesordder.vercel.app/")}
             >
               Visit Project --&gt;
             </button>
@@ -211,7 +211,7 @@ export const Projects = () => {
           <div className="technology">
             <h4>HTML</h4>
             <h4>CSS</h4>
-            <h4>Bootstrap</h4>
+            <h4>Javascript</h4>
           </div>
         </div>
       </div>
