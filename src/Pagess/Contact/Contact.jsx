@@ -48,13 +48,13 @@ export const Contact = () => {
                 <FaGithub />
               </a>
 
-              {/* <a
+              <a
                 href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedin />
-              </a> */}
+              </a>
             </div>
 
             <a

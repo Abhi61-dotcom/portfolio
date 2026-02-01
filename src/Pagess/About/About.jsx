@@ -46,7 +46,7 @@ export const About = () => {
         Right now, I’m looking for an opportunity to work with a creative team
         where I can learn, contribute, and build meaningful products. */}
 
-        Hey! I’m <strong> Abhishek Choudhary</strong>, a Computer Science graduate and a <b> Full-Stack MERN Developer</b> who genuinely enjoys turning ideas into real, interactive web experiences. <br /><br />
+        Hey! I’m <strong> Abhishek Choudhary</strong>, a Computer Science graduate and a <span style={{color:"red" , fontSize:"25px" , fontWeight:"500"}}>Full-Stack MERN Developer</span> who genuinely enjoys turning ideas into real, interactive web experiences. <br /><br />
 
         I work with <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>, building complete responsive and scalable web applications from intuitive front-end interfaces to efficient back-end systems. I focus on creating clean, user-friendly applications that not only look good but perform smoothly.<br /><br />
 
