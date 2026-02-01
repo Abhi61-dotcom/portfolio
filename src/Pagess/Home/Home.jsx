@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import profile from "../../assets/profile.png";
+import { useNavigate } from "react-router-dom";
+
 import "./Home.css";
 
 export const Home = () => {
+  const navigate = useNavigate();
   // Animation variants
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -44,9 +47,9 @@ export const Home = () => {
         {/* Profile Image */}
         <motion.div
           className="profile_img"
-          initial={{scale:0,opacity:0}}
-          whileInView={{ scale: 1, opacity: 1 }} 
-          transition={{ duration: 0.8, ease: "easeOut", delay:0.5 }}
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
           viewport={{ once: true }}
         >
           <img src={profile} alt="Abhishek Profile" />
@@ -88,11 +91,13 @@ export const Home = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.5 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/contact")}
           >
             Hire Me
           </motion.button>
+
         </div>
       </div>
     </>
