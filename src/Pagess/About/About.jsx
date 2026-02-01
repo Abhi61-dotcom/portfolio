@@ -26,7 +26,7 @@ export const About = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        Hey! I’m <strong>Abhishek Choudhary</strong>, a Computer Science graduate
+        {/* Hey! I’m <strong>Abhishek Choudhary</strong>, a Computer Science graduate
         and a front-end developer who genuinely enjoys turning ideas into real,
         interactive web experiences.
         <br /><br />
@@ -44,7 +44,17 @@ export const About = () => {
         skills, or figuring out better ways to make the web more user-friendly.
         <br /><br />
         Right now, I’m looking for an opportunity to work with a creative team
-        where I can learn, contribute, and build meaningful products.
+        where I can learn, contribute, and build meaningful products. */}
+
+        Hey! I’m <strong> Abhishek Choudhary</strong>, a Computer Science graduate and a <b> Full-Stack MERN Developer</b> who genuinely enjoys turning ideas into real, interactive web experiences. <br /><br />
+
+        I work with <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>, building complete responsive and scalable web applications from intuitive front-end interfaces to efficient back-end systems. I focus on creating clean, user-friendly applications that not only look good but perform smoothly.<br /><br />
+
+        I got into web development out of curiosity — wondering how websites actually worked. That curiosity slowly turned into a passion, and since then I’ve been building real-world full-stack projects that help me grow with every line of code. Along the way, I’ve also explored <strong>Generative AI</strong> integration to build smarter and more dynamic applications.<br /><br />
+
+        When I’m not coding, you’ll find me exploring new technologies, improving my design and problem-solving skills, or finding better ways to make the web more efficient.<br /><br />
+
+        Right now, I’m looking for an opportunity where I can contribute as a <b>MERN Stack Developer</b>, learn from experienced professionals, and build meaningful digital products.<br /><br />
       </motion.p>
     </motion.div>
   );
