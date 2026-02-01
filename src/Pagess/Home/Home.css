@@ -11,10 +11,11 @@
 
 /* Profile Image */
 .profile_img img {
-  width: 320px;
-  height: 320px;
+  width: 350px;
+  height: 390px;
   object-fit: cover;
   border-radius: 25%;
+  object-position: top;
   box-shadow: 0 8px 40px rgba(51, 51, 237, 0.7);
   transition: transform 0.3s ease;
 }
