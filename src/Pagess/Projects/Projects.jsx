@@ -193,6 +193,10 @@ export const Projects = () => {
         </div>
         <div className="salesorderinfo">
           <div>
+            <div>
+              <div><strong style={{fontSize:"40px"}}>Sales Order Billing</strong></div>
+              <div><strong style={{fontSize:"40px"}}>Website</strong></div>
+            </div>
             <h2>
               A fast and dynamic Sales Order entry tool built with React. It
               allows quick customer input, multi-item management,
