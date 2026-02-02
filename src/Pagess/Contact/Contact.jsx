@@ -49,7 +49,7 @@ export const Contact = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+                href="https://www.linkedin.com/in/abhishek-choudhary-03k/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
