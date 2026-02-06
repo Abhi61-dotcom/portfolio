@@ -1,7 +1,7 @@
 .about-container{
     border: 3px solid blue;
     border-radius: 15px;
-    box-shadow: 0 -2px 20px blue;
+    box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
     padding: 40px;
     margin: 10px;
 }

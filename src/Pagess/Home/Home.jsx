@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import profile from "../../assets/profile.png";
 import { useNavigate } from "react-router-dom";
-
 import "./Home.css";
+import reactLogo from "../../assets/react.png";
+import nodeLogo from "../../assets/nodejs.png";
+import mongoLogo from "../../assets/mongodb.png";
+import jsLogo from "../../assets/js.png";
+import expressLogo from "../../assets/express.png";
 
 export const Home = () => {
   const navigate = useNavigate();
-  // Animation variants
+
+  // 🔥 Scroll Top Fix
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -39,67 +48,103 @@ export const Home = () => {
     visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
   };
 
-  const text = "Hi, I'm Abhishek Choudhary ";
+  const text = "Hi, I'm Abhishek Choudhary";
 
   return (
-    <>
-      <div className="m-container">
-        {/* Profile Image */}
-        <motion.div
-          className="profile_img"
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+    <div className="m-container">
+      {/* Profile Image */}
+      <motion.div
+        className="profile_img"
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <img src={profile} alt="Abhishek Profile" />
+      </motion.div>
+
+      {/* Objective Section */}
+      <div className="objective">
+        <motion.h2
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
         >
-          <img src={profile} alt="Abhishek Profile" />
-        </motion.div>
+          {text.split("").map((char, index) => (
+            <motion.span key={index} variants={letter} className="letter">
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.h2>
 
-        {/* Objective Section */}
-        <div className="objective">
-          {/* Animated Heading */}
-          <motion.h2
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {text.split("").map((char, index) => (
-              <motion.span key={index} variants={letter} className="letter">
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </motion.h2>
+        <h3 className="role">MERN Stack Developer 🚀</h3>
 
-          {/* Animated Paragraph */}
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {/* I’m a computer Science graduate with strong skills in
-            <span class="text-blue-400 font-semibold"> Frontend </span>, and{" "}
-            <span class="text-blue-400 font-semibold"> BAckend </span>. */}
-            Computer Science graduate with a strong foundation in React and MERN stack development, including hands-on experience in building responsive, user-friendly web applications. Skilled in frontend and backend technologies, with a passion for modern web development and clean UI design. Motivated fresher seeking an internship or entry-level developer role to apply technical skills, enhance practical experience, and contribute effectively to real-world projects.
-          </motion.p>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          I build modern, responsive web applications using React,
+          Node.js, Express, and MongoDB. Passionate about clean UI,
+          performance, and real-world problem-solving.
+        </motion.p>
 
-          {/* Animated Button */}
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Currently seeking an internship or entry-level developer role
+          where I can turn ideas into impactful web solutions.
+        </motion.p>
+
+        <div className="buttonss">
           <motion.button
             className="hire-btn"
             variants={bounce}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => navigate("/contact")}
+            onClick={() => navigate("/projects")}
           >
-            Hire Me
+            View Projects
           </motion.button>
 
+          <motion.a
+            href="/Updated RESUME.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hire-btn outline-btn"
+            variants={bounce}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Download Resume
+          </motion.a>
+
+
+
+        </div>
+
+        <p className="built">
+          Built 5+ projects with hands-on MERN experience
+        </p>
+        <div className="mern">
+          <img src={reactLogo} alt="React" />
+          <img src={nodeLogo} alt="Node" />
+          <img src={mongoLogo} alt="MongoDB" />
+          <img src={jsLogo} alt="JavaScript" />
+          <img src={expressLogo} alt="Express" />
         </div>
       </div>
-    </>
+    </div>
   );
 };

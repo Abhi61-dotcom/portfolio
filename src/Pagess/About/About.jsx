@@ -26,26 +26,6 @@ export const About = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        {/* Hey! I’m <strong>Abhishek Choudhary</strong>, a Computer Science graduate
-        and a front-end developer who genuinely enjoys turning ideas into real,
-        interactive web experiences.
-        <br /><br />
-        I work mostly with <strong>HTML</strong>, <strong>CSS</strong>,{" "}
-        <strong>JavaScript</strong>, and <strong>React.js</strong>, and I love
-        building clean, responsive websites that not only look good but feel good
-        to use.
-        <br /><br />
-        I got into web development out of curiosity — wondering how websites
-        actually worked. That curiosity slowly turned into a passion, and since
-        then I’ve been creating projects that help me learn and grow with every
-        line of code.
-        <br /><br />
-        When I’m not coding, you’ll find me exploring new tech, improving design
-        skills, or figuring out better ways to make the web more user-friendly.
-        <br /><br />
-        Right now, I’m looking for an opportunity to work with a creative team
-        where I can learn, contribute, and build meaningful products. */}
-
         Hey! I’m <strong> Abhishek Choudhary</strong>, a Computer Science graduate and a <span style={{color:"red" , fontSize:"25px" , fontWeight:"500"}}>Full-Stack MERN Developer</span> who genuinely enjoys turning ideas into real, interactive web experiences. <br /><br />
 
         I work with <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>, building complete responsive and scalable web applications from intuitive front-end interfaces to efficient back-end systems. I focus on creating clean, user-friendly applications that not only look good but perform smoothly.<br /><br />
