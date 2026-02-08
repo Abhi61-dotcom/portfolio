@@ -1,9 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import axios from "axios";
 import "./Contact.css";
 
 export const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/contact",
+        formData
+      );
+
+      if (res.data.success) {
+        setSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+
+        setTimeout(() => {
+          setSuccess(false);
+        }, 3000);
+      }
+    } catch (error) {
+      alert("Something went wrong ❌");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div className="contact-page">
       <motion.div
@@ -38,7 +81,6 @@ export const Contact = () => {
               </a>
             </p>
 
-            {/* SOCIAL LINKS */}
             <div className="socials">
               <a
                 href="https://github.com/Abhi61-dotcom"
@@ -72,17 +114,51 @@ export const Contact = () => {
         <div className="contact-right">
           <h2>Contact Me</h2>
 
-          <form className="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              required
+            />
+
             <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your Message"
               rows="5"
               required
             ></textarea>
-            <button type="submit" className="send-btn">
-              Send Message
+
+            <button
+              type="submit"
+              className="send-btn"
+              disabled={loading}
+            >
+              {loading ? "Sending..." : "Send Message"}
             </button>
+
+            {success && (
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="success-msg"
+              >
+                Message Sent Successfully ✅
+              </motion.p>
+            )}
           </form>
         </div>
       </motion.div>

@@ -119,3 +119,17 @@
 .send-btn:hover {
   transform: scale(1.05);
 }
+
+
+.success-msg {
+  margin-top: 10px;
+  color: #00ff99;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Better loading effect */
+.send-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
