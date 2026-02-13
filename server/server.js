@@ -2,8 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const Contact = require("./models/contact")
+const Contact = require("./models/contact");
 require("dotenv").config();
+
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -26,30 +28,28 @@ app.post("/api/contact", async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
-    // Save to MongoDB
     const newContact = new Contact({ name, email, message });
     await newContact.save();
 
-    // Send Email
     await transporter.sendMail({
-      from: email,
+      from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: "New Contact Message",
       text: `
-        Name: ${name}
-        Email: ${email}
-        Message: ${message}
+Name: ${name}
+Email: ${email}
+Message: ${message}
       `
     });
 
     res.status(200).json({ success: true });
   } catch (error) {
-    console.log(error);
+    console.log("Error:", error);
     res.status(500).json({ success: false });
   }
 });
 
-
-app.listen(process.env.PORT, () => {
-  console.log("Server running 🚀");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT} 🚀`);
 });
