@@ -100,7 +100,7 @@ export const Contact = () => {
             </div>
 
             <a
-              href="/Updated RESUME.pdf"
+              href="/Abhishek Choudhary Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="resume-btn"

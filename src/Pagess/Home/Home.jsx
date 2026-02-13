@@ -116,7 +116,7 @@ export const Home = () => {
           </motion.button>
 
           <motion.a
-            href="/Updated RESUME.pdf"
+            href="/Abhishek Choudhary Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hire-btn outline-btn"
