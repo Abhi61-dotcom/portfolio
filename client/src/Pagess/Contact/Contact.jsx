@@ -23,30 +23,29 @@ export const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+    e.preventDefault();
+    setLoading(true);
 
-  try {
-    const res = await axios.post(
-      "https://portfolio-sever-ny6x.onrender.com/api/contact",
-      formData
-    );
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/contact",
+        formData
+      );
 
-    if (res.data.success) {
-      setSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
+      if (res.data.success) {
+        setSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
 
-      setTimeout(() => {
-        setSuccess(false);
-      }, 3000);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 3000);
+      }
+    } catch (error) {
+      alert("Something went wrong ❌");
     }
-  } catch (error) {
-    alert("Something went wrong ❌");
-  }
 
-  setLoading(false);
-};
-
+    setLoading(false);
+  };
 
   return (
     <div className="contact-page">
