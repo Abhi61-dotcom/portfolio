@@ -71,12 +71,25 @@ export const Home = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {text.split("").map((char, index) => (
-            <motion.span key={index} variants={letter} className="letter">
-              {char === " " ? "\u00A0" : char}
-            </motion.span>
+          {text.split(" ").map((word, wordIndex) => (
+            <span
+              key={wordIndex}
+              style={{ display: "inline-block", marginRight: "8px" }}
+            >
+              {word.split("").map((char, charIndex) => (
+                <motion.span
+                  key={charIndex}
+                  variants={letter}
+                  className="letter"
+                  style={{ display: "inline-block" }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </span>
           ))}
         </motion.h2>
+
 
         <h3 className="role">MERN Stack Developer 🚀</h3>
 

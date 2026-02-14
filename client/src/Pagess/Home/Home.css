@@ -5,7 +5,7 @@
   gap: 5rem;
   width: 100%;
   min-height: 72.5vh;
-  padding: 0 8%;
+  /* padding: 0 8%; */
   background: radial-gradient(circle at 20% 20%, #0f1b4c, #020124 70%);
 }
 
@@ -37,16 +37,14 @@
   color: #ffffff;
 }
 
-/* Objective */
-/* Objective */
 .objective {
   flex: 1;
-  max-width: 600px;
+  max-width: 1000px;
   text-align: left;
 }
 
 .objective h2 {
-  font-size: clamp(1.6rem, 5vw, 3rem);
+  font-size: 40px;
   line-height: 1.2;
   word-break: break-word;
   white-space: normal;
