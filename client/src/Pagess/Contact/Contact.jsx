@@ -28,7 +28,7 @@ export const Contact = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/contact",
+        "https://portfolio-73e9.onrender.com/api/contact",
         formData
       );
 
@@ -41,6 +41,10 @@ export const Contact = () => {
         }, 3000);
       }
     } catch (error) {
+      console.error(
+        "Contact Form Error:",
+        error.response?.data || error.message
+      );
       alert("Something went wrong ❌");
     }
 

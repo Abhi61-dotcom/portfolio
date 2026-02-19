@@ -12,7 +12,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Could not connect to MongoDB", err));
 
@@ -40,7 +41,7 @@ app.post("/api/contact", async (req, res) => {
 Name: ${name}
 Email: ${email}
 Message: ${message}
-      `
+      `,
     });
 
     res.status(200).json({ success: true });
