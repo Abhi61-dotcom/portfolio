@@ -18,7 +18,9 @@ mongoose
   .catch((err) => console.error("Could not connect to MongoDB", err));
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -45,12 +47,13 @@ Message: ${message}
     });
 
     res.status(200).json({ success: true });
+
   } catch (error) {
-     console.log("FULL ERROR:", error);   // 🔥 Important
-  res.status(500).json({
-    success: false,
-    error: error.message
-  });
+    console.log("FULL ERROR:", error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+    });
   }
 });
 
