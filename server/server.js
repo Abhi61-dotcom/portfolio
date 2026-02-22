@@ -1,9 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 const Contact = require("./models/contact");
 require("dotenv").config();
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const PORT = process.env.PORT || 5000;
 
@@ -21,15 +24,15 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Could not connect to MongoDB", err));
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+// const transporter = nodemailer.createTransport({
+//   host: "smtp.gmail.com",
+//   port: 587,
+//   secure: false,
+//   auth: {
+//     user: process.env.EMAIL_USER,
+//     pass: process.env.EMAIL_PASS,
+//   },
+// });
 
 app.post("/api/contact", async (req, res) => {
   try {
@@ -38,8 +41,8 @@ app.post("/api/contact", async (req, res) => {
     const newContact = new Contact({ name, email, message });
     await newContact.save();
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+    await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
       to: process.env.EMAIL_USER,
       replyTo: email,
       subject: "New Contact Message",
