@@ -1,0 +1,161 @@
+.m-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+  width: 100%;
+  min-height: 72.5vh;
+  /* padding: 0 8%; */
+  background: radial-gradient(circle at 20% 20%, #0f1b4c, #020124 70%);
+}
+
+/* Profile Image */
+.profile_img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: -50px;
+}
+
+.profile_img img {
+  width: 370px;
+  height: 430px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 120px;
+  box-shadow: 0 0 60px rgba(0, 162, 255, 0.8);
+  transition: 0.4s ease;
+}
+
+.profile_img img:hover {
+  transform: scale(1.06);
+}
+
+/* Animated Letters */
+.letter {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.objective {
+  flex: 1;
+  max-width: 1000px;
+  text-align: left;
+}
+
+.objective h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.objective h3 {
+  font-size: 1.8rem;
+  color: #4ea8ff;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.objective p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d0d8ff;
+  margin-bottom: 1.2rem;
+}
+
+/* Buttons */
+.buttonss {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.hire-btn {
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1f80ff, #4ea8ff);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+  transform: translateY(-4px);
+}
+
+.outline-btn {
+  background: transparent;
+  border: 2px solid #4ea8ff;
+  color: #4ea8ff;
+  box-shadow: none;
+}
+
+/* Built text */
+.built {
+  margin-top: 1rem;
+  color: #9acbff;
+  font-weight: 500;
+}
+
+/* MERN Icons */
+.mern {
+  display: flex;
+  padding-left: 10%;
+  margin-top: 1.2rem;
+  gap: 2rem;
+}
+
+.mern img {
+  width: 38px;
+  transition: 0.3s ease;
+}
+
+.mern img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .m-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding: 100px 5% 40px;
+  }
+
+   .objective {
+    text-align: center;
+  }
+
+  .buttonss {
+    justify-content: center;
+  }
+
+  .mern {
+    justify-content: center;
+  }
+
+  .profile_img img {
+    width: 260px;
+    height: 300px;
+  }
+
+  .objective h2 {
+    font-size: 2rem;
+  }
+
+  .objective h3 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 500px) {
+  .objective h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+}

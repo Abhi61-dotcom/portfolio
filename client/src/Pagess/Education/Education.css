@@ -1,0 +1,84 @@
+.edu-container {
+  width: 100%;
+  padding: 1px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.school,
+.coaching {
+  margin-top: 30px;
+  border: 2px solid #00d4ff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.school:hover,
+.coaching:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
+  border-color: #36d1dc;
+}
+
+.education h1 {
+  color: #00d4ff;
+  font-size: 24px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.education h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #36d1dc;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.education ul li {
+  color: #f1f1f1;
+  margin: 12px 0;
+  padding: 10px 14px;
+  border-left: 3px solid #36d1dc;
+  background: rgba(0, 212, 255, 0.05);
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.education ul li:hover {
+  background: rgba(28, 173, 202, 0.87);
+  transform: translateX(6px);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .school, .coaching {
+    width: 100%;
+  }
+
+  .education h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+}

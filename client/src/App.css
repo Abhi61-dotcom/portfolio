@@ -1,0 +1,59 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navbar-height: 70px; /* Navbar ki height yahan define */
+}
+
+/* Global HTML/Body */
+html, body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #020124;
+  scroll-behavior: smooth;
+  color: #fff;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content - navbar ke niche se start */
+.middle {
+  flex: 1;
+  padding: calc(var(--navbar-height) + 30px) 20px 40px;
+  /* 👆 70px navbar + 30px safe gap */
+}
+
+/* Footer */
+footer, .footer {
+  height: 60px;
+  width: 100%;
+  background: #111;
+  color: #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .middle {
+    padding: calc(var(--navbar-height) + 20px) 15px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .middle {
+    padding: calc(var(--navbar-height) + 10px) 10px 40px;
+  }
+}
