@@ -3,6 +3,7 @@ import Weather from "../../assets/Weather.png";
 import recipe from "../../assets/Recipefinder.png";
 import mystore from "../../assets/My Store.png";
 import coffee from "../../assets/Coders Coffee.png";
+import uPm from "../../assets/userProductManagement.png"
 // import organic from "../../assets/Bootstrapproject.png";
 import sales from "../../assets/salesorder.png";
 import "./project.css";
@@ -10,6 +11,47 @@ import "./project.css";
 export const Projects = () => {
   return (
     <div>
+
+
+      {/* ----------------------------User Product Management ------------------------------- */}
+      <div className="weather">
+        <div>
+          <img src={uPm} alt="" />
+        </div>
+        <div className="weatherinfo">
+          <div>
+            <div className="main" >
+              <div>
+                <strong style={{ fontSize: "40px" }}>User Product Management</strong>
+              </div>
+              <div><strong style={{ fontSize: "40px" }}>Website</strong></div>
+            </div>
+            <h1>
+              A MERN-based User Product Management application where users can securely authenticate and perform Create, Read, Update, and Delete operations on products. Designed with REST APIs and a responsive frontend for efficient data handling.
+            </h1>
+          </div>
+          <div>
+            <button
+              onClick={() => window.open("https://user-project-management.vercel.app/")}
+            >
+              Visit Project --&gt;
+            </button>
+          </div>
+          <h2 style={{ fontSize: "15px", marginTop: "25px", marginBottom: "5px" }}>Technologies Used:</h2>
+          <div className="technology">
+            {/* {/* React.js, Node.js, Express.js, MongoDB, JWT/*} */}
+            <h4>React.js</h4>
+            <h4>Node.js</h4>
+            <h4>Express.js</h4>
+            <h4>MongoDB</h4>
+            <h4>JWT</h4>
+          </div>
+        </div>
+      </div>
+
+
+
+
       {/* ----------------------------WEATHER ------------------------------- */}
       <div className="weather">
         <div>
@@ -18,10 +60,10 @@ export const Projects = () => {
         <div className="weatherinfo">
           <div>
             <div className="main" >
-             <div>
-              <strong style={{fontSize:"40px" }}>Modern Weather</strong>
-             </div>
-             <div><strong style={{fontSize:"40px"}}>Application</strong></div>
+              <div>
+                <strong style={{ fontSize: "40px" }}>Modern Weather</strong>
+              </div>
+              <div><strong style={{ fontSize: "40px" }}>Application</strong></div>
             </div>
             <h1>
               A modern weather app that gives you real-time temperature,
@@ -36,7 +78,7 @@ export const Projects = () => {
               Visit Project --&gt;
             </button>
           </div>
-          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <h2 style={{ fontSize: "15px", marginTop: "25px", marginBottom: "5px" }}>Technologies Used:</h2>
           <div className="technology">
             <h4>HTML</h4>
             <h4>CSS</h4>
@@ -53,8 +95,8 @@ export const Projects = () => {
         <div className="recipeinfo">
           <div>
             <div>
-              <div><strong style={{fontSize:"40px"}}>Food Recipe Finder </strong></div>
-              <div><strong style={{fontSize:"40px"}}>Website</strong></div>
+              <div><strong style={{ fontSize: "40px" }}>Food Recipe Finder </strong></div>
+              <div><strong style={{ fontSize: "40px" }}>Website</strong></div>
             </div>
             <h2>
               This app instantly finds recipes for any food you search. Just
@@ -71,7 +113,7 @@ export const Projects = () => {
               Visit Project --&gt;
             </button>
           </div>
-          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <h2 style={{ fontSize: "15px", marginTop: "25px", marginBottom: "5px" }}>Technologies Used:</h2>
           <div className="technology">
             <h4>HTML</h4>
             <h4>CSS</h4>
@@ -89,8 +131,8 @@ export const Projects = () => {
         <div className="mystoreinfo">
           <div>
             <div>
-              <div><strong style={{fontSize:"40px"}}>E-commerce </strong></div>
-              <div><strong style={{fontSize:"40px"}}>Website</strong></div>
+              <div><strong style={{ fontSize: "40px" }}>E-commerce </strong></div>
+              <div><strong style={{ fontSize: "40px" }}>Website</strong></div>
             </div>
             <h2>
               My Store — A fully functional e-commerce project built using API
@@ -106,7 +148,7 @@ export const Projects = () => {
               Visit Project --&gt;
             </button>
           </div>
-          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <h2 style={{ fontSize: "15px", marginTop: "25px", marginBottom: "5px" }}>Technologies Used:</h2>
           <div className="technology">
             <h4>HTML</h4>
             <h4>CSS</h4>
@@ -125,8 +167,8 @@ export const Projects = () => {
         <div className="coffeeinfo">
           <div>
             <div>
-              <div><strong style={{fontSize:"40px"}}>Coders Coffee</strong></div>
-              <div><strong style={{fontSize:"40px"}}>Clone</strong></div>
+              <div><strong style={{ fontSize: "40px" }}>Coders Coffee</strong></div>
+              <div><strong style={{ fontSize: "40px" }}>Clone</strong></div>
             </div>
             <h2>
               Coders Coffee — A React-based animated clone website. This is a
@@ -142,7 +184,7 @@ export const Projects = () => {
               Visit Project --&gt;
             </button>
           </div>
-          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <h2 style={{ fontSize: "15px", marginTop: "25px", marginBottom: "5px" }}>Technologies Used:</h2>
           <div className="technology">
             <h4>HTML</h4>
             <h4>CSS</h4>
@@ -194,8 +236,8 @@ export const Projects = () => {
         <div className="salesorderinfo">
           <div>
             <div>
-              <div><strong style={{fontSize:"40px"}}>Sales Order Billing</strong></div>
-              <div><strong style={{fontSize:"40px"}}>Website</strong></div>
+              <div><strong style={{ fontSize: "40px" }}>Sales Order Billing</strong></div>
+              <div><strong style={{ fontSize: "40px" }}>Website</strong></div>
             </div>
             <h2>
               A fast and dynamic Sales Order entry tool built with React. It
@@ -211,7 +253,7 @@ export const Projects = () => {
               Visit Project --&gt;
             </button>
           </div>
-          <h2 style={{fontSize:"15px",marginTop:"25px" , marginBottom:"5px"}}>Technologies Used:</h2>
+          <h2 style={{ fontSize: "15px", marginTop: "25px", marginBottom: "5px" }}>Technologies Used:</h2>
           <div className="technology">
             <h4>HTML</h4>
             <h4>CSS</h4>
