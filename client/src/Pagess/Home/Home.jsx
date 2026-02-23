@@ -12,7 +12,6 @@ import expressLogo from "../../assets/express.png";
 export const Home = () => {
   const navigate = useNavigate();
 
-  // 🔥 Scroll Top Fix
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
