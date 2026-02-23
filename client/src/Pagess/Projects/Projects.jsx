@@ -32,7 +32,7 @@ export const Projects = () => {
           </div>
           <div>
             <button
-              onClick={() => window.open("https://user-project-management.vercel.app/")}
+              onClick={() => window.open("hhttps://user-product-management-alpha.vercel.app/")}
             >
               Visit Project --&gt;
             </button>
